@@ -7,7 +7,7 @@
 
 const CLINIC_CONFIG = {
   // ---------- Branding ----------
-  clinicName: "Mishra Clinic",
+  clinicName: "Mishra ",
   clinicTagline: "Multispecialist Clinic",
 
   // ---------- Doctor ----------

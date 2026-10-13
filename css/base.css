@@ -1,3 +1,7 @@
+/* =========================================================
+   BASE — typography, sections, animations
+   ========================================================= */
+
 body {
   font-family: var(--font-family);
   background-color: var(--bg-white);
@@ -5,6 +9,13 @@ body {
   line-height: 1.5;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent horizontal overflow site-wide */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -38,6 +49,7 @@ section {
 section:last-of-type {
   border-bottom: none;
 }
+
 
 /* ============ ANIMATIONS ============ */
 .fade-up {
