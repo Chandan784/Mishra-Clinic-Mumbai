@@ -1,0 +1,29 @@
+/* =========================================
+   THEME VARIABLES — Edit these to rebrand
+   ========================================= */
+:root {
+  /* Colors */
+  --bg-white: #ffffff;
+  --text-black: #111111;
+  --text-soft: #2c2c2c;
+  --light-orange: #ffb347;
+  --light-orange-soft: #ffe6c7;
+  --light-orange-deep: #e6952b;
+  --border-light: #f0f0f0;
+
+  /* Shadows */
+  --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.06);
+
+  /* Radii */
+  --radius-card: 24px;
+  --radius-btn: 40px;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-padding: 24px;
+  --section-padding: 80px;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}

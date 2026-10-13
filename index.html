@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mishra Clinic – Multispecialist clinic in Dharavi, Mumbai. Dr. K.K. Mishra, MD Physician, Chiropractor & Spine Specialist." />
+  <title>Mishra Clinic | Spine & Multispecialist Care</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo" data-config="clinicName">Mishra <span>Clinic</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Doctor</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#timing">Timings</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content fade-up">
+        <span class="hero-badge">
+          <i class="fas fa-stethoscope"></i>
+          <span data-config="clinicTagline">Multispecialist Clinic</span>
+        </span>
+        <h1>
+          Expert care for
+          <span class="hero-highlight" data-config="heroHighlight">spine, joints & overall health</span>
+        </h1>
+        <p data-config="heroDescription">
+          Dr. K.K. Mishra – MD Physician, Consultation Surgeon, Chiropractor & Spine Specialist. Trusted care in the
+          heart of Dharavi, Mumbai.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:+919967520638" class="btn btn-primary" data-config-href="phone">
+            <i class="fas fa-phone-alt"></i> Call now
+          </a>
+          <a href="#contact" class="btn btn-outline">Book appointment</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3 data-config="yearsExperience">15+</h3>
+            <p>Years experience</p>
+          </div>
+          <div class="stat-item">
+            <h3 data-config="happyPatients">5000+</h3>
+            <p>Happy patients</p>
+          </div>
+          <div class="stat-item">
+            <h3 data-config="rating">4.9★</h3>
+            <p>Patient rating</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image fade-up delay-1">
+        <img src="assets/images/mcmprofile.jpeg" alt="Mishra Clinic spine and joint care" data-config-src="heroImage" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT DOCTOR ========== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head fade-up">
+        <h2>Meet your doctor</h2>
+        <p>Experienced physician dedicated to holistic healing and long-term pain relief.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="doctor-card fade-up">
+          <h3 class="doctor-name" data-config="doctorName">Dr. K.K. Mishra</h3>
+          <p class="doctor-title" data-config="doctorTitle">MD Physician · Chiropractor · Spine Specialist</p>
+          <div class="doctor-detail">
+            <i class="fas fa-user-md"></i>
+            <span data-config="doctorQualification">MBBS, MD (Physician), Consultation Surgeon</span>
+          </div>
+          <div class="doctor-detail">
+            <i class="fas fa-bone"></i>
+            <span>Chiropractic & Spine Specialist</span>
+          </div>
+          <div class="doctor-detail">
+            <i class="fas fa-clock"></i>
+            <span data-config="consultationHours">Mon–Sat · 2 PM – 6 PM & 7 PM – 11 PM</span>
+          </div>
+          <a href="tel:+919967520638" class="btn btn-primary" style="margin-top: 20px;" data-config-href="phone">
+            <i class="fas fa-phone-alt"></i> Call for appointment
+          </a>
+        </div>
+
+        <div class="fade-up delay-1">
+          <h2>Why patients trust us</h2>
+          <p style="margin-bottom: 24px; color: var(--text-soft);">
+            A multispecialist clinic combining modern medicine, chiropractic care, and personalised treatment
+            plans for spine, joint, and general health concerns.
+          </p>
+          <ul style="list-style: none;">
+            <li class="doctor-detail"><i class="fas fa-check-circle"></i> Personalised consultation</li>
+            <li class="doctor-detail"><i class="fas fa-check-circle"></i> Non-surgical pain relief</li>
+            <li class="doctor-detail"><i class="fas fa-check-circle"></i> Spine & posture correction</li>
+            <li class="doctor-detail"><i class="fas fa-check-circle"></i> Evening hours available</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head fade-up">
+        <h2>Our services</h2>
+        <p>Comprehensive care under one roof.</p>
+      </div>
+      <div class="services-grid" id="servicesGrid">
+        <!-- Populated by js/config.js + js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TIMINGS ========== -->
+  <section id="timing">
+    <div class="container">
+      <div class="section-head fade-up">
+        <h2>Clinic timings</h2>
+        <p>Open Monday to Saturday, with evening slots available.</p>
+      </div>
+      <div class="timing-grid">
+        <div class="timing-box fade-up">
+          <h3><i class="fas fa-sun"></i> Afternoon session</h3>
+          <div class="timing-row">
+            <span>Monday – Saturday</span>
+            <span class="time-highlight" data-config="afternoonTime">2:00 PM – 6:00 PM</span>
+          </div>
+          <div class="timing-row">
+            <span>Sunday</span>
+            <span>Closed</span>
+          </div>
+        </div>
+        <div class="timing-box fade-up delay-1">
+          <h3><i class="fas fa-moon"></i> Evening session</h3>
+          <div class="timing-row">
+            <span>Monday – Saturday</span>
+            <span class="time-highlight" data-config="eveningTime">7:00 PM – 11:00 PM</span>
+          </div>
+          <div class="timing-row">
+            <span>Sunday</span>
+            <span>Closed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-head fade-up">
+        <h2>Inside our clinic</h2>
+        <p>A clean, modern space designed for comfort and effective treatment.</p>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Gallery items injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <img src="" alt="" id="lightboxImage" class="lightbox-image" />
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head fade-up">
+        <h2>Get in touch</h2>
+        <p>Walk in or call us to book your consultation.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="fade-up">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Address</h4>
+              <p data-config="address">Dharavi 60ft Road, Near Chota Sion Hospital, Mumbai – 400017</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+919967520638" data-config-href="phone" data-config="phoneDisplay">+91 99675 20638</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:Krishna9892789623@gmail.com" data-config-href="email"
+                  data-config="emailDisplay">Krishna9892789623@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up delay-1">
+          <div class="timing-box" style="background: #fefaf5;">
+            <h3><i class="fas fa-calendar-check"></i> Book an appointment</h3>
+            <p style="margin-bottom: 20px; color: var(--text-soft);">
+              Call us directly or email to confirm your preferred slot. Walk-ins welcome during clinic hours.
+            </p>
+            <a href="tel:+919967520638" class="btn btn-primary" style="width: 100%; text-align: center;"
+              data-config-href="phone">
+              <i class="fas fa-phone-alt"></i> Call clinic
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <!-- Column 1: Brand -->
+      <div class="footer-col footer-brand">
+        <a href="#home" class="footer-logo" data-config="clinicName">Mishra Clinic</a>
+        <p class="footer-desc" data-config="footerDescription">
+          Trusted multispecialist clinic in Dharavi, Mumbai — offering physician consultation,
+          chiropractic care, and spine treatment with a patient-first approach.
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" aria-label="Twitter" target="_blank" rel="noopener">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/919967520638" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Doctor</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#timing">Timings</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Services -->
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">General Consultation</a></li>
+          <li><a href="#services">Spine Care</a></li>
+          <li><a href="#services">Chiropractic</a></li>
+          <li><a href="#services">Pain Management</a></li>
+          <li><a href="#services">Multispeciality Care</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul class="footer-contact">
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <span data-config="address">Dharavi 60ft Road, Near Chota Sion Hospital, Mumbai – 400017</span>
+          </li>
+          <li>
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+919967520638" data-config-href="phone" data-config="phoneDisplay">+91 99675 20638</a>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:Krishna9892789623@gmail.com" data-config-href="email" data-config="emailDisplay">
+              Krishna9892789623@gmail.com
+            </a>
+          </li>
+          <li>
+            <i class="fas fa-clock"></i>
+            <span data-config="consultationHours">Mon–Sat · 2 PM – 6 PM & 7 PM – 11 PM</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="currentYear"></span> <span data-config="clinicName">Mishra Clinic</span>. All rights reserved.
+        </p>
+        <p class="footer-credit">Designed with <i class="fas fa-heart"></i> for better healthcare</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
