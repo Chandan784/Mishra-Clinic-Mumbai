@@ -7,7 +7,7 @@
 
 const CLINIC_CONFIG = {
   // ---------- Branding ----------
-  clinicName: "Mishra ",
+  clinicName: "Mishra clinic ",
   clinicTagline: "Multispecialist Clinic",
 
   // ---------- Doctor ----------
@@ -81,6 +81,34 @@ social: {
   linkedin: "https://linkedin.com/",
   whatsapp: "https://wa.me/919967520638",
 },
+whatsappNumber: "919967520638",
+
+testimonials: [
+  {
+    name: "Ramesh K.",
+    role: "Back pain patient",
+    stars: 5,
+    text: "I had chronic lower back pain for years. Dr. Mishra's treatment worked wonders. Very professional and caring clinic.",
+  },
+  {
+    name: "Sunita P.",
+    role: "Spine care patient",
+    stars: 5,
+    text: "The evening timings are very convenient. Dr. Mishra explained everything clearly and the results speak for themselves.",
+  },
+  {
+    name: "Ajay M.",
+    role: "Chiropractic patient",
+    stars: 5,
+    text: "Clean clinic, friendly staff, and effective treatment. I recommend Mishra Clinic to anyone with spine or joint issues.",
+  },
+],
+heroImages: [
+  { src: "assets/images/mcmprofile.jpeg", alt: "Dr. K.K. Mishra" },
+  { src: "assets/images/gallery/clinic-1.jpg", alt: "Clinic reception" },
+  { src: "assets/images/gallery/clinic-2.jpg", alt: "Consultation room" },
+  { src: "assets/images/gallery/clinic-3.jpg", alt: "Treatment setup" },
+],
 };
 
 
