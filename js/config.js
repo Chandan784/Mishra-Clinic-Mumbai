@@ -9,7 +9,7 @@ const CLINIC_CONFIG = {
   // ---------- Branding ----------
   clinicName: "Mishra clinic ",
   clinicTagline: "Multispecialist Clinic",
-
+  logoImage: "assets/images/logo.png",   // ← your logo file path
   // ---------- Doctor ----------
   doctorName: "Dr. K.K. Mishra",
   doctorTitle: "MD Physician · Chiropractor · Spine Specialist",
@@ -104,7 +104,7 @@ testimonials: [
   },
 ],
 heroImages: [
-  { src: "assets/images/mcmprofile.jpeg", alt: "Dr. K.K. Mishra" },
+  { src: "assets/images/gallery/mcmbeforeafter1.jpeg", alt: "Dr. K.K. Mishra" },
   { src: "assets/images/gallery/clinic-1.jpg", alt: "Clinic reception" },
   { src: "assets/images/gallery/clinic-2.jpg", alt: "Consultation room" },
   { src: "assets/images/gallery/clinic-3.jpg", alt: "Treatment setup" },

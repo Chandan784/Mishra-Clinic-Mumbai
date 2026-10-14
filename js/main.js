@@ -2,6 +2,7 @@
    MAIN SCRIPT
    - Applies CLINIC_CONFIG to DOM
    - Renders services, gallery, testimonials
+   - Hero slider
    - Enquiry form → WhatsApp redirect
    ========================================================= */
 (function () {
@@ -31,18 +32,24 @@
   });
 
   /* ---------- Logo formatting ---------- */
-  const logo = document.querySelector('.logo');
-  if (logo && cfg.clinicName) {
-    const parts = cfg.clinicName.split(' ');
-    if (parts.length > 1) {
-      const first = parts.slice(0, -1).join(' ');
-      const last = parts.slice(-1)[0];
-      logo.innerHTML = `${first} <span>${last}</span>`;
-    } else {
-      logo.textContent = cfg.clinicName;
-    }
+  // const logo = document.querySelector('.logo');
+  // if (logo && cfg.clinicName) {
+  //   const parts = cfg.clinicName.split(' ');
+  //   if (parts.length > 1) {
+  //     const first = parts.slice(0, -1).join(' ');
+  //     const last = parts.slice(-1)[0];
+  //     logo.innerHTML = `${first} <span>${last}</span>`;
+  //   } else {
+  //     logo.textContent = cfg.clinicName;
+  //   }
+  // }
+  /* ---------- Logo formatting ---------- */
+   /* ---------- Logo image ---------- */
+  const navLogo = document.getElementById('navLogo');
+  if (navLogo && cfg.logoImage) {
+    navLogo.src = cfg.logoImage;
+    navLogo.alt = (cfg.clinicName || 'Clinic logo') + ' logo';
   }
-
   /* ---------- Social links ---------- */
   if (cfg.social) {
     const socialMap = {
@@ -116,6 +123,77 @@
       .join('');
   }
 
+  /* ---------- Hero slider ---------- */
+  const heroTrack = document.getElementById('heroSliderTrack');
+  const heroDots  = document.getElementById('heroSliderDots');
+
+  if (heroTrack && heroDots && Array.isArray(cfg.heroImages) && cfg.heroImages.length) {
+    const images = cfg.heroImages;
+
+    // Inject slides
+    heroTrack.innerHTML = images
+      .map(
+        (img, i) => `
+        <img src="${img.src}" alt="${img.alt || 'Slide ' + (i + 1)}"
+             class="${i === 0 ? 'active' : ''}" loading="${i === 0 ? 'eager' : 'lazy'}" />
+      `
+      )
+      .join('');
+
+    // Inject dots
+    heroDots.innerHTML = images
+      .map(
+        (_, i) =>
+          `<button data-index="${i}" class="${i === 0 ? 'active' : ''}" aria-label="Go to slide ${i + 1}"></button>`
+      )
+      .join('');
+
+    const slides = heroTrack.querySelectorAll('img');
+    const dots   = heroDots.querySelectorAll('button');
+    let current  = 0;
+    let timer;
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    function next() {
+      goTo(current + 1);
+    }
+
+    function startAuto() {
+      stopAuto();
+      if (images.length > 1) timer = setInterval(next, 4000);
+    }
+
+    function stopAuto() {
+      if (timer) clearInterval(timer);
+    }
+
+    // Dot click
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        goTo(parseInt(dot.dataset.index, 10));
+        startAuto();
+      });
+    });
+
+    // Pause on hover
+    heroTrack.addEventListener('mouseenter', stopAuto);
+    heroTrack.addEventListener('mouseleave', startAuto);
+
+    // Pause when tab hidden
+    document.addEventListener('visibilitychange', () => {
+      document.hidden ? stopAuto() : startAuto();
+    });
+
+    startAuto();
+  }
+
   /* ---------- Enquiry form → WhatsApp ---------- */
   const form = document.getElementById('enquiryForm');
   const note = document.getElementById('enquiryNote');
@@ -175,72 +253,3 @@
   const yearEl = document.getElementById('currentYear');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
-
-
-/* ---------- Hero slider ---------- */
-const heroTrack = document.getElementById('heroSliderTrack');
-const heroDots  = document.getElementById('heroSliderDots');
-
-if (heroTrack && heroDots && Array.isArray(cfg.heroImages) && cfg.heroImages.length) {
-  const images = cfg.heroImages;
-
-  // Inject slides
-  heroTrack.innerHTML = images
-    .map(
-      (img, i) => `
-      <img src="${img.src}" alt="${img.alt || 'Slide ' + (i + 1)}"
-           class="${i === 0 ? 'active' : ''}" loading="${i === 0 ? 'eager' : 'lazy'}" />
-    `
-    )
-    .join('');
-
-  // Inject dots
-  heroDots.innerHTML = images
-    .map((_, i) => `<button data-index="${i}" class="${i === 0 ? 'active' : ''}" aria-label="Go to slide ${i + 1}"></button>`)
-    .join('');
-
-  const slides = heroTrack.querySelectorAll('img');
-  const dots   = heroDots.querySelectorAll('button');
-  let current  = 0;
-  let timer;
-
-  function goTo(index) {
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = (index + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-  }
-
-  function next() {
-    goTo(current + 1);
-  }
-
-  function startAuto() {
-    stopAuto();
-    if (images.length > 1) timer = setInterval(next, 4000);
-  }
-
-  function stopAuto() {
-    if (timer) clearInterval(timer);
-  }
-
-  // Dot click
-  dots.forEach((dot) => {
-    dot.addEventListener('click', () => {
-      goTo(parseInt(dot.dataset.index, 10));
-      startAuto();
-    });
-  });
-
-  // Pause on hover
-  heroTrack.addEventListener('mouseenter', stopAuto);
-  heroTrack.addEventListener('mouseleave', startAuto);
-
-  // Pause when tab hidden (saves battery)
-  document.addEventListener('visibilitychange', () => {
-    document.hidden ? stopAuto() : startAuto();
-  });
-
-  startAuto();
-}
