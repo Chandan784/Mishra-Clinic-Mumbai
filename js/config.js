@@ -9,7 +9,7 @@ const CLINIC_CONFIG = {
   // ---------- Branding ----------
   clinicName: "Mishra clinic ",
   clinicTagline: "Multispecialist Clinic",
-  logoImage: "assets/images/logo.png",   // ← your logo file path
+  logoImage: "assets/images/navlogo.png",   // ← your logo file path
   // ---------- Doctor ----------
   doctorName: "Dr. K.K. Mishra",
   doctorTitle: "MD Physician · Chiropractor · Spine Specialist",
